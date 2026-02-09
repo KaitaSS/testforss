@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>тест</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="frame">
+
+  <header>
+    <h1>Проверка на лоха для СС</h1>
+  </header>
+
+  <main id="start" class="active">
+    <div class="center">
+      <p class="description">
+        Проверочный тест на знания.<br>
+        Ошибка - начал заново.<br>
+        Время ограничено.
+      </p>
+      <button class="btn" id="startBtn">Начать</button>
+    </div>
+  </main>
+
+  <main id="question">
+  <div class="timer" id="timer">30</div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-block">
+      <div class="question-title" id="qTitle"></div>
+      <div class="question-text" id="qText"></div>
+      <div class="image-slot" id="imageSlot">
+        не забыть вставить
+      </div>
+
+      <div class="answers" id="answers"></div>
+    </div>
+  </main>
+
+  <main id="result">
+    <div class="result">
+      <h2 class="success">100%</h2>
+      <p>Ты умный.</p>
+      <p class="description">Похвастайся Элаю.</p>
+      <button class="btn" id="restartBtn">Пройти заново</button>
+    </div>
+  </main>
+
+  <footer>написано и создано для TER, бомжам не юзать</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

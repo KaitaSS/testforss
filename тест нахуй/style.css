@@ -1,0 +1,150 @@
+:root {
+  --bg-main: #0e0e10;
+  --bg-panel: #17171b;
+  --border: rgba(255,255,255,0.12);
+  --text-main: #f2f2f2;
+  --text-muted: #a0a0a8;
+  --success: #3a7a5a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 400px at 50% -10%, rgba(255,255,255,0.06), transparent),
+    linear-gradient(180deg, #0b0b0d, #111114);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px 48px 28px;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.12em;
+  font-size: 28px;
+}
+
+main { display: none; }
+main.active { display: block; }
+
+.center {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.description {
+  max-width: 560px;
+  margin: 0 auto 36px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 14px 42px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-main);
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+.timer {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-family: 'Cinzel', serif;
+  color: var(--text-muted);
+}
+
+.image-slot {
+  height: 180px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.answer {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.answer:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.result {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.success {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: var(--success);
+}
+
+footer {
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.progress-wrap {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    #3a7a5a,
+    #6fbf8f
+  );
+  transition: width 0.35s ease;
+}
